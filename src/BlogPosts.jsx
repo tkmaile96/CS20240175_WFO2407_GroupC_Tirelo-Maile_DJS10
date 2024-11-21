@@ -20,9 +20,12 @@ const BlogPosts = () => {
         fetchPosts(); // Call the function to fetch the posts
 
     }, []) // The empty array means this effect will only run once
-    
-    return (
 
+    return (
+        <div>
+            <h1>Blog Posts</h1>
+            
+        </div>
     )
 }
 export default BlogPosts;
