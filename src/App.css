@@ -1,0 +1,20 @@
+.App {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 25px;
+}
+
+.post {
+    margin: 10px 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+
+}
+h1 {
+    color: #333;
+}
+ .error-messsage {
+    color: red;
+    font-weight: bolder;
+ }
