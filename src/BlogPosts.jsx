@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const BlogPosts = () => {
-    const [post, setPosts] = useState([]) // Declare a new state variable, which we'll call "post"
+    const [posts, setPosts] = useState([]) // Declare a new state variable, which we'll call "post"
     const [error, setError] = useState(null); // Declare a new state variable, which we'll call "error"
 
     useEffect(() => {
@@ -9,7 +9,7 @@ const BlogPosts = () => {
             try{
                 const response = await fetch ('https://jsonplaceholder.typicode.com/posts');
                 if(!response.ok) {
-                    throw new Error ('Error: response.status + response.statusText');
+                    throw new Error (`Error: ${response.status} ${response.statusText}`);
                 }
                 const data = await response.json(); // convert the response data to json
                 setPosts(data); // Update the state with the fetched posts
@@ -22,14 +22,14 @@ const BlogPosts = () => {
     }, []) // The empty array means this effect will only run once
 
     if(error) {
-        return <div className="error-message">Error: {error}</div>; // If there's an error, display it
+        return <div className="error-message">{error}</div>; // If there's an error, display it
     }
 
     return (
         <div>
             <h1>Blog Posts</h1>
-            {postMessage.lenght > 0 ? (
-                post.map((post) => (
+            {posts.length > 0 ? (
+                posts.map((post) => (
                     <div key={post.id} className="post"> 
                     <h2>{post.title}</h2>
                     <p>{post.body}</p> 
