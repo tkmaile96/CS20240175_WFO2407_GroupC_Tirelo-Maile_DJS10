@@ -6,8 +6,8 @@
 .post {
     margin: 10px 0;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    /* border: 1px solid #ccc;
+    border-radius: 5px; */
     color: #333;
     background-color: #fff;
 
@@ -15,7 +15,10 @@
 h1 {
     color: #fff;
 }
- .error-messsage {
+ .error-message {
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
     color: red;
     font-weight: bolder;
  }

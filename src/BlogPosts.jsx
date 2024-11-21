@@ -22,7 +22,7 @@ const BlogPosts = () => {
     }, []) // The empty array means this effect will only run once
 
     if(error) {
-        return <div className="error-message">{error}</div>; // If there's an error, display it
+        return <div className="error-message">Data Fetching Failed</div>; // If there's an error, display it
     }
 
     return (
