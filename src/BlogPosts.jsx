@@ -24,6 +24,16 @@ const BlogPosts = () => {
     return (
         <div>
             <h1>Blog Posts</h1>
+            {postMessage.lenght > 0 ? (
+                post.map((post) => (
+                    <div key={post.id} className="post"> 
+                    <h2>{post.title}</h2>
+                    <p>{post.body}</p> 
+                    </div>
+                ))
+            ) : (
+                <p>Loading.........</p> // If there are no posts, display a loading message
+            )}
             
         </div>
     )
