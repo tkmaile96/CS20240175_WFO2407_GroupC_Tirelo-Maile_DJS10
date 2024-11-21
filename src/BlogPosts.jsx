@@ -21,6 +21,10 @@ const BlogPosts = () => {
 
     }, []) // The empty array means this effect will only run once
 
+    if(error) {
+        return <div className="error-message">Error: {error}</div>; // If there's an error, display it
+    }
+
     return (
         <div>
             <h1>Blog Posts</h1>
